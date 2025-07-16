@@ -1,0 +1,156 @@
+@font-face {
+    font-family: fonts;
+    src: url(assets/fonts/Roboto-Regular.ttf);
+}
+:root{
+--Red: hsl(4, 100%, 67%);
+--Blue800: hsl(234, 29%, 20%);
+--Blue700: hsl(235, 18%, 26%);
+--Grey: hsl(0, 0%,58%);
+--White: hsl(0, 0%, 100%);
+}
+body{
+    font-family: fonts;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Blue700);
+}
+.card{
+    display: flex;
+    background-color: var(--White);
+    width: 800px;
+    padding: 30px;
+    border-radius: 20px;
+}
+.right-side
+{
+    width: 60%;
+}
+.left-side{
+    width: 40%;
+}
+.left-side img{
+    width: 100%;
+}
+ul {
+  padding-left: 0; 
+  list-style: none; 
+}
+
+li {
+  margin-bottom: 20px;
+  padding-left: 40px;
+  position: relative;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 24px;  
+  height: 24px;
+  background-image: url("assets/images/icon-list.svg"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+label{
+    margin-bottom: 10px;
+    color: black;
+    font-size: small;
+}
+input{
+    padding: 10px 20px;
+    font-family: inherit;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--Blue800);
+}
+button{
+    font-family: inherit;
+    margin-top: 20px;
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    color: var(--White);
+    border: 5px;
+    cursor: pointer;
+    background-color: var(--Blue800);
+   
+}
+button:hover{
+    background-color: var(--Red);
+    transition: all 1s;
+}
+h1{
+    font-size: 50px;
+    color: var(--Blue800);
+}
+.hide{
+    display: none;
+}
+.card-2
+{
+    background-color: var(--White);
+    width: 400px;
+    padding: 40px;
+    border-radius: 5px;
+
+}
+.card-2 h1{
+    font-size: 40px;
+}
+.icon-card-2{
+    width: 50px;
+}
+.card-2 button{
+    width: 100%;
+}
+@media(max-width:768px) {
+    .card{
+        flex-direction: column-reverse;
+        width: 95%;
+        padding: 0;
+    }
+    body{
+        padding: 0;
+        margin: 0;
+        
+    }
+    .card h1{
+        font-size: 30px;
+    }
+    .right-side{
+        width: 100%;
+        padding: 20px;
+    }
+    .left-side{
+        width: 100%;
+    }
+    .left-side img{
+        content: url(assets/images/illustration-sign-up-mobile.svg);
+    }
+    form{
+        width:90%
+    }
+    .card-2{
+        min-height: 100vh;
+    }
+}
+input.error {
+  border: 1px solid var(--Red);
+  background-color: #ffe6e6;
+}
+
+.error-message {
+  color: var(--Red);
+  font-size: small;
+  margin-top: 5px;
+}
